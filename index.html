@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="src/style.css">
+  <script defer src="src/index.js"></script>
+  <title>IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,20 +16,53 @@
   </style>
 </head>
 <body>
-
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+  <div class="content">
+    <div class="header">
+      <div class="page-title">
+        IP Address Tracker
+      </div>
+      <div class="search-bar">
+        <form action="" method="get" id="ip_form">
+          <input type="text" placeholder="Search for any IP address or domain" name="search_bar" id="search_bar">
+          <button class="submit-btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+        </form>   
+      </div>
+    </div>
+    <div class="ip-info">
+      <div class="ip-address">
+        <div class="grid-cell">
+          <div class="ip-address-title title">IP ADDRESS</div>
+          <div class="ip-address-value">192.212.174.101</div>
+        </div>     
+      </div>
+      <div class="ip-location">
+        <div class="grid-cell">
+          <div class="ip-location-title title">LOCATION</div>
+        <div class="ip-location-value">Brooklyn, NY  <br> 10001</div>
+        </div>
+        
+      </div>
+      <div class="ip-time-zone">
+        <div class="grid-cell">
+          <div class="ip-time-zone-title title">TIME ZONE</div>
+          <div class="ip-time-zone-value">UTC-05:00</div>
+        </div>
+      </div>
+      <div class="ip-isp">
+        <div class="grid-cell">
+          <div class="ip-isp-title title">ISP</div>
+        <div class="ip-isp-value">SpaceX <br> Starlink</div>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <img src="images/google-placeholder.png" alt="">
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Paolo Vilardi</a>.
   </div>
 </body>
 </html>
