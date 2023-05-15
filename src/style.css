@@ -79,8 +79,10 @@ body{
 
 
 /* ip info section */
+/* TODO MAKE IT NOT MOVE WHEN CHANGING VALUES. ADD ROTATING CIRCLE WHEN LOADING? */
 .ip-info{
     position: absolute;
+    z-index: 1000;
     background: white;
     padding: 30px;
     border-radius: 20px;
@@ -113,7 +115,7 @@ body{
 }
 
 /* map section */
-.map img{
-    height: 100%;
+.map{
+    height: 70%;
     width: 100%;
 }

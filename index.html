@@ -6,6 +6,13 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""></script>
   <script defer src="src/index.js"></script>
   <title>IP Address Tracker</title>
 
@@ -32,31 +39,30 @@
       <div class="ip-address">
         <div class="grid-cell">
           <div class="ip-address-title title">IP ADDRESS</div>
-          <div class="ip-address-value">192.212.174.101</div>
+          <div class="ip-address-value">None</div>
         </div>     
       </div>
       <div class="ip-location">
         <div class="grid-cell">
           <div class="ip-location-title title">LOCATION</div>
-        <div class="ip-location-value">Brooklyn, NY  <br> 10001</div>
+        <div class="ip-location-value">None</div>
         </div>
         
       </div>
       <div class="ip-time-zone">
         <div class="grid-cell">
           <div class="ip-time-zone-title title">TIME ZONE</div>
-          <div class="ip-time-zone-value">UTC-05:00</div>
+          <div class="ip-time-zone-value">None</div>
         </div>
       </div>
       <div class="ip-isp">
         <div class="grid-cell">
           <div class="ip-isp-title title">ISP</div>
-        <div class="ip-isp-value">SpaceX <br> Starlink</div>
+        <div class="ip-isp-value">None</div>
         </div>
       </div>
     </div>
-    <div class="map">
-      <img src="images/google-placeholder.png" alt="">
+    <div class="map" id="map">
     </div>
   </div>
   
