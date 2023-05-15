@@ -10,7 +10,7 @@
     font-family: "rubik";
 }
 
-body{
+html{
     font-size: 18px;
 }
 
@@ -18,6 +18,9 @@ body{
     width: 100%;
     height: 98vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+
 }
 
 
@@ -30,24 +33,26 @@ body{
     align-items: center;
     gap: 20px;
     padding: 30px;
+    flex: 1;
 }
 
 .page-title{
     color: white;
     font-weight: 500;
     font-size: 2rem;
-    justify-self: center;
 }
 
 /* search bar section */
 
 
 .search-bar{
+    min-width: fit-content;
     width: 30%;
     justify-self: center;
 }
 
 .search-bar form{
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -81,20 +86,20 @@ body{
 /* ip info section */
 /* TODO MAKE IT NOT MOVE WHEN CHANGING VALUES. ADD ROTATING CIRCLE WHEN LOADING? */
 .ip-info{
-    position: absolute;
+    min-width: fit-content;
+    width: 50%;
     z-index: 1000;
     background: white;
     padding: 30px;
     border-radius: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -170%);
+    /* transform: translateY(70%); */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 20px;
     color: hsl(0, 0%, 17%);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.5;
 }
 
@@ -116,6 +121,21 @@ body{
 
 /* map section */
 .map{
+    flex: 2;
     height: 70%;
     width: 100%;
+}
+
+@media (max-width: 600px){
+    html{
+        font-size: 12px;
+    }
+    .ip-address::after, .ip-location::after, .ip-time-zone::after{
+        content: none;
+    }
+}
+@media not screen and (orientation:landscape){
+    html{
+        font-size: 12px;
+    }
 }
